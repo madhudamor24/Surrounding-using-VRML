@@ -1,0 +1,59 @@
+#VRML V2.0 utf8
+
+DEF TRANSEARTH Transform
+{
+	children
+	[
+		Shape
+		{
+			appearance DEF Brown Appearance
+			{
+				material Material
+				{
+					diffuseColor 0.6 0.4 0.0
+
+
+				}
+				
+				texture ImageTexture{ url "textures/images.jpg" repeatS FALSE repeatT FALSE}
+			}
+
+			geometry Cylinder
+			{
+				height 2.0
+				radius 2.0
+
+			}
+		}
+	]
+}
+
+DEF TRANS Transform
+{
+	translation 0.0 2.0 0.0
+	children
+	[
+		Shape
+		{
+			appearance USE Brown
+
+			geometry Cone
+			{
+				height 2.0
+				bottomRadius 2.5
+			}
+		}
+	]
+}
+
+DEF TIMER TimeSensor {
+    loop TRUE
+    cycleInterval 30.0
+}
+DEF ROTATOR OrientationInterpolator {
+    key [ 0, 0.5, 1 ]
+    keyValue [ 0 1 0 0, 0 1 0 3.141, 0 1 0 6.282 ]
+}
+ROUTE TIMER.fraction_changed TO ROTATOR.set_fraction
+ROUTE ROTATOR.value_changed TO TRANS.set_rotation
+ROUTE ROTATOR.value_changed TO TRANSEARTH.set_rotation

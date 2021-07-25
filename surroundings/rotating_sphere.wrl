@@ -1,0 +1,54 @@
+#VRML V2.0 utf8
+
+
+DEF TRANS Transform {
+    children [
+        Shape {
+            appearance Appearance {
+                material Material {
+                    diffuseColor 0.84 0.86 0.042
+                    }
+                     texture ImageTexture{ url "textures/ball.jpg" repeatS TRUE repeatT TRUE}
+                
+            }
+            geometry Sphere {
+               radius 0.8}
+        }
+    ]
+}
+
+DEF TRANSEARTH Transform {
+    children [
+      Shape {
+        appearance Appearance {
+                material Material {
+                    diffuseColor 0.0 0.5 0.75
+            }
+  
+        }
+
+        geometry Sphere {
+              radius 0.5
+      }
+    }
+  ]
+}
+
+
+DEF TIMER TimeSensor {
+    loop TRUE
+    cycleInterval 1.0
+}
+DEF ROTATOR OrientationInterpolator {
+    key [ 0, 0.5, 1 ]
+    keyValue [ 0 1 0 0, 0 1 0 3.141, 0 1 0 6.282 ]
+}
+ROUTE TIMER.fraction_changed TO ROTATOR.set_fraction
+ROUTE ROTATOR.value_changed TO TRANS.set_rotation
+ROUTE ROTATOR.value_changed TO TRANSEARTH.set_rotation
+
+
+Transform {
+   translation 3.5 -0.9 0
+   rotation 1.0 0.0 0.0 0.6
+}
