@@ -1,0 +1,416 @@
+#VRML V2.0 utf8
+
+NavigationInfo {
+    speed 1.0
+   type "WALK"
+}
+
+
+
+Background {
+skyAngle [ 1.2 1.57]
+skyColor [0 0 1, 0 0 0.6, 1 0 0]
+groundColor [0.5 0.5 0.0]
+
+backUrl "surroundings/textures/sunset_back.png"
+rightUrl "surroundings/textures/sunset_right.png"
+leftUrl "surroundings/textures/sunset_left.png"
+frontUrl "surroundings/textures/sunset_front.png"
+topUrl "surroundings/textures/sunset_top.png"
+bottomUrl "surroundings/textures/sunset_bottom.png"
+
+}
+
+
+Viewpoint {
+   position -6 2.5 20
+   orientation 1 0 0 -0.2
+   fieldOfView 1
+   description "View from eyelevel"
+}
+
+Viewpoint {
+   position  2.0 2.0 0.0
+   orientation 0 1 0 0.785
+   description "View of the lights"
+}
+
+DirectionalLight {
+   on         TRUE
+   intensity  .5
+   color      1.0 1.0 1.0  
+   ambientIntensity 1.0
+   direction -.00327 -.83034 .55724
+} 
+
+Group {
+   children [
+	  
+      Inline {
+         url "surroundings/Ground.wrl"
+      },
+
+      Transform {
+          translation -8.0 1 -10.0
+          children [
+               Inline {
+                  url "surroundings/rotating_sphere.wrl"
+               }
+          ]
+      },
+
+      Transform {
+          translation 8.0 1 -15.0
+          children [
+               Inline {
+                  url "surroundings/person.wrl"
+               }
+          ]
+      },
+
+      Transform {
+          translation 15.0 1 -40.0
+          children [
+               Inline {
+                  url "surroundings/house.wrl"
+               }
+          ]
+      },
+
+      Transform {
+          translation 25.0 1 -25.0
+          children [
+               Inline {
+                  url "surroundings/house.wrl"
+               }
+          ]
+      },
+
+      Transform {
+          translation 25.0 1 -10.0
+          children [
+               Inline {
+                  url "surroundings/house.wrl"
+               }
+          ]
+      },
+
+      Transform {
+          translation -25.0 1 50.0
+          children [
+               Inline {
+                  url "surroundings/house.wrl"
+               }
+          ]
+      },
+      
+
+      DEF TRANS Transform {
+          translation -18.0 0.5 -18.0
+          children [
+               Inline {
+                  url "surroundings/robot.wrl"
+               }
+          ]
+      },
+
+      Transform {
+          translation 0.0 0.0 8.0
+          children [
+               Inline {
+                  url "surroundings/Trafficlight1.wrl"
+               }
+          ]
+      },
+
+      Transform {
+          translation 0.0 0.0  8.0
+	        rotation    0.0 1.0  0.0 3.14
+             children [
+               Inline {
+                  url "surroundings/Trafficlight1.wrl"
+               }
+             ]
+      },
+
+      Transform {
+          translation -8.0 0.0 8.0
+          children [
+               Inline {
+                  url "surroundings/Trafficlight1.wrl"
+               }
+          ]
+      },
+
+      Transform {
+          translation 0.0 0.0  -8.0
+	  rotation    0.0 1.0  0.0 3.14
+             children [
+               Inline {
+                  url "surroundings/Trafficlight1.wrl"
+               }
+             ]
+      },
+
+      Transform {
+          translation 0.0 0.0 -8.0
+          children [
+               Inline {
+                  url "surroundings/Trafficlight1.wrl"
+               }
+          ]
+      },
+
+      Transform {
+          translation 8.0 0.0  -8.0
+	  rotation    0.0 1.0  0.0 3.14
+             children [
+               Inline {
+                  url "surroundings/Trafficlight1.wrl"
+               }
+             ]
+      },
+
+	  
+	  Transform	{
+		   translation 25.0 0.0 -80.0
+		   rotation     0.0 1.0  0.0 1.57
+             children [
+                Inline {
+                   url "surroundings/RandomTrees.wrl"
+                }
+             ]	  
+	  },
+
+	  Transform	{
+		   translation 29.0 0.0 -66.0
+		   rotation     0.0 1.0  0.0 1.57
+             children [
+                Inline {
+                   url "surroundings/RandomTrees.wrl"
+                }
+             ]
+	  },
+
+	  Transform	{
+		   translation 25.0 0.0 -70.0
+		   rotation     0.0 1.0  0.0 1.57
+             children [
+                Inline {
+                   url "surroundings/RandomTrees.wrl"
+                }
+             ]
+	  },
+	  
+	  Transform	{
+		   translation 25.0 0.0 30.0
+		   rotation     0.0 1.0  0.0 1.57
+             children [
+                Inline {
+                   url "surroundings/RandomTrees.wrl"
+                }
+             ]
+	  },
+
+	  Transform	{
+		   translation 20.0 0.0 30.0
+		   rotation     0.0 1.0  0.0 1.57
+             children [
+                Inline {
+                   url "surroundings/RandomTrees.wrl"
+                }
+             ]
+	  },
+
+	  Transform	{
+		   translation 20.0 0.0 40.0
+		   rotation     0.0 1.0  0.0 3.57
+             children [
+                Inline {
+                   url "surroundings/RandomTrees.wrl"
+                }
+             ]
+	  },
+
+	  Transform	{
+		   translation 20.0 0.0 35.0
+		   rotation     0.0 1.0  0.0 1.57
+             children [
+                Inline {
+                   url "surroundings/RandomTrees.wrl"
+                }
+             ]
+	  },
+
+	  Transform	{
+		   translation 20.0 0.0 38.0
+		   rotation     0.0 1.0  0.0 2.57
+             children [
+                Inline {
+                   url "surroundings/RandomTrees.wrl"
+                }
+             ]
+	  },
+
+	  Transform	{
+		   translation -40.0 0.0 30.0
+		   rotation     0.0 1.0  0.0 1.57
+             children [
+                Inline {
+                   url "surroundings/RandomTrees.wrl"
+                }
+             ]
+	  
+	  },
+
+	  Transform	{
+		   translation -45.0 0.0 50.0
+		   rotation     0.0 1.0  0.0 1.57
+             children [
+                Inline {
+                   url "surroundings/RandomTrees.wrl"
+                }
+             ]
+	  },
+
+	  Transform	{
+		   translation -43.0 0.0 40.0
+		   rotation     0.0 1.0  0.0 1.57
+             children [
+                Inline {
+                   url "surroundings/RandomTrees.wrl"
+                }
+             ]
+	  },
+
+    Transform {
+       translation -40.0 0.0 -50.0
+       rotation     0.0 1.0  0.0 1.57
+             children [
+                Inline {
+                   url "surroundings/RandomTrees.wrl"
+                }
+             ]
+    },
+
+    Transform {
+       translation -40.0 0.0 50.0
+       rotation     0.0 1.0  0.0 1.57
+             children [
+                Inline {
+                   url "surroundings/RandomTrees.wrl"
+                }
+             ]
+    },
+
+    Transform {
+       translation -40.0 0.0 0.0
+       rotation     0.0 1.0  0.0 1.57
+             children [
+                Inline {
+                   url "surroundings/RandomTrees.wrl"
+                }
+             ]
+    },
+
+	  Transform	{
+		   translation 10.0 0.0 7.2
+		   rotation     0.0 0.0  0.0 1.57
+		   scale .4 .4 .4
+             children [
+                Inline {
+                   url "surroundings/mhhedge.wrl"
+                }
+             ]
+	  },
+
+     Transform  {
+       translation -50.0 0.0 7.2
+       rotation     0.0 0.0  0.0 1.57
+       scale .4 .4 .4
+             children [
+                Inline {
+                   url "surroundings/mhhedge.wrl"
+                }
+             ]
+    },
+
+	  Transform	{
+		   translation -10.0 -49.5 12.2
+		   rotation     0.0 0.0  0.0 -1.4
+		   scale .01 .01 .01
+             children [
+                Inline {
+                   url "surroundings/Car.wrl"
+                }
+             ]
+	  },
+
+   
+    
+    Sound {
+   minBack 5
+   minFront 5
+   maxFront 50
+   minFront 50
+   source AudioClip {
+      description "Drum Noise"
+      loop TRUE
+      url "surroundings/sounds/birdChirping.mp3"
+   }
+   spatialize TRUE
+},
+
+    Sound {
+   minBack 5
+   minFront 5
+   maxFront 50
+   minFront 50
+   source AudioClip {
+      description "Drum Noise"
+      loop TRUE
+      url "surroundings/sounds/city.mp3"
+   }
+   spatialize TRUE
+},
+
+    Sound {
+   minBack 5
+   minFront 5
+   maxFront 50
+   minFront 50
+   source AudioClip {
+      description "Drum Noise"
+      loop TRUE
+      url "surroundings/sounds/thunder.mp3"
+   }
+   spatialize TRUE
+},
+
+Sound {
+   minBack 5
+   minFront 5
+   maxFront 50
+   minFront 50
+   source AudioClip {
+      description "Drum Noise"
+      loop TRUE
+      url "surroundings/sounds/crowd.wav"
+   }
+   spatialize TRUE
+}
+
+   ]
+}
+
+
+DEF TIMER TimeSensor {
+    loop TRUE
+    cycleInterval 20.0
+}
+DEF ROTATOR OrientationInterpolator {
+    key [ 0, 0.5, 1 ]
+    keyValue [ 0 1 0 0, 0 1 0 3.141, 0 1 0 6.282 ]
+}
+ROUTE TIMER.fraction_changed TO ROTATOR.set_fraction
+ROUTE ROTATOR.value_changed TO TRANS.set_rotation
